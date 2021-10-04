@@ -72,13 +72,13 @@ app.get("/help/data", (req, res) => {
   res.send("Data of the Help.");
 });
 
-app.get("/help/*", (req, res) => {
-  res.render("404", {
-    title: "Help 404 message!",
-    name: "Enes Karakas",
-    errorMessage: "Help 404 Message...",
-  });
-});
+// app.get("/help/*", (req, res) => {
+//   res.render("404", {
+//     title: "Help 404 message!",
+//     name: "Enes Karakas",
+//     errorMessage: "Help 404 Message...",
+//   });
+// });
 
 // app.get("*", (req, res) => {
 //   res.render("404", {
