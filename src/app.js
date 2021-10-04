@@ -20,10 +20,12 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Weather Home Page",
-    name: "Enes karakas",
-  });
+  // res.render("index", {
+  //   title: "Weather Home Page",
+  //   name: "Enes karakas",
+  // });
+
+  res.send({ learning: "Test About Heroku" });
 });
 
 app.get("/about", (req, res) => {
