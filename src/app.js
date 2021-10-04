@@ -24,8 +24,6 @@ app.get("", (req, res) => {
     title: "Weather Home Page",
     name: "Enes karakas",
   });
-
-  // res.send({ learning: "Test About Heroku" });
 });
 
 app.get("/about", (req, res) => {
