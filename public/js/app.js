@@ -5,8 +5,8 @@ weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const userInputValue = userInput.value;
-  console.log(userInputValue);
-  const url = `/weather?address=${userInputValue}`;
+
+  const url = "/weather?address=" + userInputValue;
 
   fetch(url)
     .then((response) => {
