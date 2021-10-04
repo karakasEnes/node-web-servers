@@ -3,8 +3,8 @@ const express = require("express");
 const hbs = require("hbs");
 const forecast = require("./utils/forecast");
 const geocode = require("./utils/geocode");
-const port = process.env.PORT || 3000;
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -80,13 +80,13 @@ app.get("/help/*", (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res.render("404", {
-    title: "General 404 message!",
-    name: "Enes Karakas",
-    errorMessage: "General 404 Message",
-  });
-});
+// app.get("*", (req, res) => {
+//   res.render("404", {
+//     title: "General 404 message!",
+//     name: "Enes Karakas",
+//     errorMessage: "General 404 Message",
+//   });
+// });
 
 app.listen(port, () => {
   console.log("Listenin the server on port " + port);
