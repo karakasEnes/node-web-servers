@@ -1,5 +1,3 @@
-// puzzle.mead.io/puzzle
-
 const weatherForm = document.querySelector("form");
 const userInput = document.querySelector("input");
 
@@ -8,7 +6,7 @@ weatherForm.addEventListener("submit", (e) => {
 
   const userInputValue = userInput.value;
   console.log(userInputValue);
-  const url = `http://localhost:3000/weather?address=${userInputValue}`;
+  const url = `/weather?address=${userInputValue}`;
 
   fetch(url)
     .then((response) => {

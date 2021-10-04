@@ -4,9 +4,8 @@ const hbs = require("hbs");
 const axios = require("axios").default;
 const forecast = require("./utils/forecast");
 const geocode = require("./utils/geocode");
-// const { forecast } = require("../utils/forecast");
-// const { geoCode } = require("../utils/geocode");
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -90,6 +89,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Listenin the server on port 3000.");
+app.listen(port, () => {
+  console.log("Listenin the server on port " + port);
 });
