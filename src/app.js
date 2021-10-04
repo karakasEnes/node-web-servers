@@ -19,13 +19,13 @@ hbs.registerPartials(partialsPath);
 // setup static directory to serve!
 app.use(express.static(publicDirectoryPath));
 
-app.get("/", (req, res) => {
-  // res.render("index", {
-  //   title: "Weather Home Page",
-  //   name: "Enes karakas",
-  // });
+app.get("", (req, res) => {
+  res.render("index", {
+    title: "Weather Home Page",
+    name: "Enes karakas",
+  });
 
-  res.send({ learning: "Test About Heroku" });
+  // res.send({ learning: "Test About Heroku" });
 });
 
 app.get("/about", (req, res) => {
